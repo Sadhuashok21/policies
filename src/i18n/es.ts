@@ -1,0 +1,123 @@
+import type { Translations } from './en';
+
+const translations: Translations = {
+  languageName: 'Español',
+  nav: {
+    home: 'Inicio',
+    privacyPolicy: 'Política de Privacidad',
+    termsOfService: 'Términos de Servicio',
+    cookiePolicy: 'Política de Cookies',
+    dataCollection: 'Recopilación de Datos',
+    permissionsPolicy: 'Política de Permisos',
+    refundPolicy: 'Política de Reembolso',
+    disclaimerPolicy: 'Descargo de Responsabilidad',
+    accessibilityPolicy: 'Política de Accesibilidad',
+    childSafetyPolicy: 'Seguridad Infantil',
+    selectLanguage: 'Seleccionar Idioma',
+  },
+  common: {
+    lastUpdated: 'Última actualización',
+    effectiveDate: 'Fecha de vigencia',
+    contactUs: 'Contáctanos',
+    email: 'Correo electrónico',
+    backToHome: 'Volver al inicio',
+    tableOfContents: 'Tabla de Contenidos',
+  },
+  privacy: {
+    title: 'Política de Privacidad',
+    intro: 'Su privacidad es importante para nosotros. Esta política explica cómo recopilamos, usamos y protegemos su información personal. Léala detenidamente para comprender nuestras prácticas con respecto a sus datos.',
+    sections: {
+      informationWeCollect: { title: 'Información que recopilamos', personal: 'Recopilamos los datos personales que nos proporciona.', usage: 'Recopilamos automáticamente datos de uso de nuestro servicio.', device: 'La información sobre su dispositivo se recopila con fines de optimización.' },
+      howWeUse: { title: 'Cómo usamos su información', content: 'Usamos su información para proporcionar, mejorar y personalizar nuestros servicios. También la utilizamos para comunicarnos con usted y garantizar la seguridad de nuestra plataforma.' },
+      dataSharing: { title: 'Intercambio de datos', content: 'No vendemos sus datos personales. Podemos compartir su información con proveedores de servicios de confianza que nos ayudan a operar nuestra plataforma.' },
+      dataSecurity: { title: 'Seguridad de los datos', content: 'Implementamos medidas de seguridad líderes para proteger sus datos. Sin embargo, ningún método de transmisión por Internet es 100% seguro.' },
+      yourRights: { title: 'Tus derechos', content: 'Tiene derecho a acceder, modificar o eliminar sus datos personales. También puede oponerse a cierto procesamiento de datos.' },
+      retention: { title: 'Retención de datos', content: 'Conservamos sus datos durante el tiempo necesario para proporcionar nuestros servicios. También cumplimos con nuestras obligaciones legales y reglamentarias.' },
+      thirdPartyLinks: { title: 'Enlaces de terceros', content: 'Nuestra plataforma puede contener enlaces a sitios de terceros. No somos responsables de sus prácticas de privacidad.' },
+      changes: { title: 'Cambios', content: 'Podemos actualizar esta política de vez en cuando. Le notificaremos cualquier cambio importante.' },
+    },
+  },
+  terms: {
+    title: 'Términos de Servicio', intro: 'Bienvenido a nuestra plataforma. Al utilizar nuestros servicios, acepta estar sujeto a estos términos de servicio. Léalos detenidamente antes de usar nuestros servicios.',
+    sections: {
+      acceptance: { title: 'Aceptación', content: 'Al acceder a nuestros servicios, acepta estos términos en su totalidad. Si no está de acuerdo, no debe usar nuestra plataforma.' },
+      useOfService: { title: 'Uso del Servicio', content: 'Acepta utilizar nuestros servicios de manera legal y responsable. No debe abusar, piratear o interrumpir nuestra infraestructura.' },
+      userAccounts: { title: 'Cuentas de Usuario', content: 'Usted es responsable de la seguridad de su cuenta y contraseña. Debe informarnos inmediatamente sobre cualquier uso no autorizado.' },
+      intellectualProperty: { title: 'Propiedad Intelectual', content: 'Todo el contenido de nuestra plataforma es propiedad nuestra o de nuestros licenciantes. No puede usarlo sin permiso.' },
+      prohibitedActivities: { title: 'Actividades Prohibidas', content: 'Está prohibido transmitir malware, enviar spam o participar en actividades ilegales en nuestra plataforma.' },
+      limitation: { title: 'Limitación de Responsabilidad', content: 'En la medida permitida por la ley, no seremos responsables por daños indirectos o consecuentes que surjan de su uso de nuestros servicios.' },
+      termination: { title: 'Terminación', content: 'Nos reservamos el derecho de suspender o cancelar su acceso a nuestros servicios en cualquier momento, por cualquier motivo, sin previo aviso.' },
+      governingLaw: { title: 'Ley Aplicable', content: 'Estos términos se rigen por las leyes de nuestra jurisdicción. Cualquier disputa se someterá a los tribunales competentes de esa región.' },
+    },
+  },
+  cookies: {
+    title: 'Política de Cookies', intro: 'Esta política explica cómo utilizamos cookies y tecnologías similares para mejorar su experiencia en nuestro sitio web. Al continuar navegando, acepta nuestro uso de cookies.',
+    sections: {
+      whatAreCookies: { title: '¿Qué son las cookies?', content: 'Las cookies son pequeños archivos de texto almacenados en su dispositivo. Nos ayudan a recordar sus preferencias y analizar el uso de nuestro sitio.' },
+      typesOfCookies: { title: 'Tipos de Cookies', essential: 'Cookies esenciales para el funcionamiento del sitio.', performance: 'Cookies de rendimiento para medir y mejorar la experiencia del usuario.', functional: 'Cookies funcionales para recordar sus elecciones.', advertising: 'Cookies publicitarias para proporcionar anuncios relevantes.' },
+      managingCookies: { title: 'Gestión de Cookies', content: 'Puede administrar o deshabilitar las cookies en la configuración de su navegador. Tenga en cuenta que es posible que algunas funciones ya no funcionen correctamente.' },
+      thirdPartyCookies: { title: 'Cookies de terceros', content: 'Utilizamos servicios de terceros que también pueden colocar cookies en su dispositivo. Estos terceros tienen sus propias políticas de privacidad.' },
+    },
+  },
+  dataCollection: {
+    title: 'Recopilación de Datos', intro: 'Creemos en la transparencia total con respecto a cómo recopilamos y procesamos sus datos. Esta página detalla específicamente nuestras prácticas de recopilación de datos.',
+    sections: {
+      whatWeCollect: { title: 'Lo que recopilamos', content: 'Recopilamos información de identificación, datos de contacto e información sobre su uso de nuestro servicio.' },
+      howWeCollect: { title: 'Cómo recopilamos', content: 'Recopilamos datos directamente cuando usted los proporciona y automáticamente a través de tecnologías de seguimiento cuando usa nuestro servicio.' },
+      purpose: { title: 'Propósito de la recopilación', content: 'El propósito principal de nuestra recopilación de datos es brindarle nuestros servicios. Buscamos continuamente mejorar y personalizar su experiencia.' },
+      legalBasis: { title: 'Base legal', content: 'Procesamos sus datos basándonos en su consentimiento, la ejecución de un contrato o nuestros intereses legítimos.' },
+      storage: { title: 'Almacenamiento de Datos', content: 'Sus datos se almacenan de forma segura en servidores ubicados en jurisdicciones con un nivel adecuado de protección.' },
+      userControl: { title: 'Control del Usuario', content: 'Tiene control total sobre los datos que recopilamos. Puede ajustar sus preferencias en la configuración de su cuenta.' },
+    },
+  },
+  permissions: {
+    title: 'Política de Permisos', intro: 'Para ofrecerle todas las características de nuestra aplicación, es posible que solicitemos ciertos permisos en su dispositivo. Esta política explica por qué necesitamos este acceso.',
+    sections: {
+      camera: { title: 'Cámara', why: 'Necesitamos acceso a su cámara para permitirle tomar fotos y escanear códigos QR.', howToManage: 'Puede revocar este acceso en cualquier momento en la configuración de su dispositivo.' },
+      microphone: { title: 'Micrófono', why: 'Se requiere acceso al micrófono para grabar notas de voz y realizar llamadas de audio.', howToManage: 'Deshabilite el acceso al micrófono a través de las preferencias del sistema de su teléfono.' },
+      location: { title: 'Ubicación', why: 'Usamos su ubicación para proporcionarle resultados relevantes cerca de usted.', howToManage: 'Los servicios de ubicación se pueden habilitar o deshabilitar en la configuración de privacidad.' },
+      notifications: { title: 'Notificaciones', why: 'Las notificaciones nos permiten mantenerlo informado de actualizaciones y mensajes importantes.', howToManage: 'Administre sus preferencias de notificación en la configuración de la aplicación.' },
+      storage: { title: 'Almacenamiento', why: 'El acceso al almacenamiento nos permite guardar archivos en su dispositivo y acceder a ellos cuando sea necesario.', howToManage: 'Puede cambiar los permisos de almacenamiento en la configuración del sistema.' },
+      contacts: { title: 'Contactos', why: 'Solicitamos acceso a sus contactos para facilitar el intercambio y la conexión con amigos.', howToManage: 'El acceso a los contactos se puede gestionar de forma selectiva en su configuración de privacidad.' },
+      biometric: { title: 'Datos biométricos', why: 'La autenticación biométrica le permite iniciar sesión de forma rápida y segura.', howToManage: 'Puede habilitar o deshabilitar el inicio de sesión biométrico en la configuración de seguridad.' },
+      dataNotStored: 'Los datos de estos permisos solo se procesan localmente y no se almacenan en nuestros servidores.',
+    },
+  },
+  refund: {
+    title: 'Política de Reembolso', intro: 'Queremos que esté completamente satisfecho con sus compras. Lea nuestra política de reembolso para comprender sus derechos y el proceso de solicitud.',
+    sections: {
+      eligibility: { title: 'Elegibilidad', content: 'Para ser elegible para un reembolso, debe solicitarlo dentro de los 30 días posteriores a la compra. El producto o servicio no debe haberse utilizado en su totalidad.' },
+      process: { title: 'Proceso', content: 'Para solicitar un reembolso, comuníquese con nuestro equipo de soporte con su número de pedido. Evaluaremos su solicitud dentro de 5 días hábiles.' },
+      nonRefundable: { title: 'Artículos no reembolsables', content: 'Los servicios personalizados, los productos digitales descargados y las tarjetas de regalo generalmente no son reembolsables, a menos que la ley exija lo contrario.' },
+      timeline: { title: 'Línea de tiempo', content: 'Si se aprueba su reembolso, el monto se acreditará a su método de pago original. Puede tardar entre 5 y 10 días hábiles en aparecer en su estado de cuenta.' },
+    },
+  },
+  disclaimer: {
+    title: 'Descargo de Responsabilidad', intro: 'La información proporcionada en nuestra plataforma es solo para fines informativos. Lea este descargo de responsabilidad para comprender los límites de nuestra responsabilidad.',
+    sections: {
+      generalDisclaimer: { title: 'Descargo de responsabilidad general', content: 'Nos esforzamos por mantener la información actualizada y correcta. Sin embargo, no hacemos representaciones ni garantías sobre la integridad o exactitud de esta información.' },
+      professionalAdvice: { title: 'Asesoramiento Profesional', content: 'El contenido de este sitio no constituye asesoramiento profesional. Siempre debe consultar a un profesional calificado para sus necesidades específicas.' },
+      externalLinks: { title: 'Enlaces externos', content: 'Nuestra plataforma puede contener enlaces a otros sitios web. No tenemos control sobre la naturaleza y el contenido de estos sitios.' },
+      accuracy: { title: 'Exactitud', content: 'Aunque hacemos todo lo posible para garantizar la exactitud de la información, pueden ocurrir errores. Renunciamos a cualquier responsabilidad por inexactitudes.' },
+    },
+  },
+  accessibility: {
+    title: 'Política de Accesibilidad', intro: 'Estamos comprometidos a hacer que nuestra plataforma sea accesible para todos los usuarios, incluidas las personas con discapacidades. Trabajamos continuamente para mejorar la experiencia de todos.',
+    sections: {
+      commitment: { title: 'Nuestro Compromiso', content: 'Creemos que el acceso a la información es un derecho fundamental. Nos esforzamos por eliminar las barreras digitales y proporcionar una plataforma inclusiva.' },
+      standards: { title: 'Estándares', content: 'Nuestro objetivo es cumplir con las Pautas de Accesibilidad al Contenido en la Web (WCAG) 2.1 en el nivel AA. Estos estándares nos ayudan a hacer que nuestro contenido sea más accesible.' },
+      features: { title: 'Características', content: 'Nuestro sitio incluye características de accesibilidad como navegación con el teclado, compatibilidad con lectores de pantalla y contrastes de color apropiados.' },
+      feedback: { title: 'Comentarios', content: 'Agradecemos sus comentarios sobre la accesibilidad de nuestra plataforma. No dude en contactarnos si encuentra alguna dificultad.' },
+    },
+  },
+  childSafety: {
+    title: 'Seguridad Infantil', intro: 'Proteger la privacidad de los niños es de suma importancia para nosotros. Esta política describe cómo manejamos la información relacionada con los menores.',
+    sections: {
+      ageRequirement: { title: 'Requisito de edad', content: 'Nuestros servicios no están dirigidos a niños menores de 13 años. No recopilamos intencionalmente datos personales de personas en este grupo de edad.' },
+      parentalConsent: { title: 'Consentimiento de los padres', content: 'Si necesitamos recopilar datos personales de un menor, siempre requeriremos el consentimiento previo y verificable de un padre o tutor.' },
+      dataHandling: { title: 'Manejo de datos', content: 'Toda la información recopilada de menores se trata con el más alto nivel de seguridad y confidencialidad. Nunca compartimos estos datos con fines publicitarios.' },
+      reporting: { title: 'Reportes', content: 'Si cree que inadvertidamente hemos recopilado datos de un niño sin el consentimiento adecuado, contáctenos de inmediato para que podamos eliminar esta información.' },
+    },
+  },
+};
+export default translations;

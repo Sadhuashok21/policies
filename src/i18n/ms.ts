@@ -1,0 +1,290 @@
+import type { Translations } from './en';
+
+const translations: Translations = {
+  languageName: 'Bahasa Melayu',
+  nav: {
+    home: 'Laman Utama',
+    privacyPolicy: 'Dasar Privasi',
+    termsOfService: 'Syarat Perkhidmatan',
+    cookiePolicy: 'Dasar Kuki',
+    dataCollection: 'Pengumpulan Data',
+    permissionsPolicy: 'Dasar Kebenaran',
+    refundPolicy: 'Dasar Bayaran Balik',
+    disclaimerPolicy: 'Penafian',
+    accessibilityPolicy: 'Dasar Kebolehcapaian',
+    childSafetyPolicy: 'Dasar Keselamatan Kanak-kanak',
+    selectLanguage: 'Pilih Bahasa',
+  },
+  common: {
+    lastUpdated: 'Kemas Kini Terakhir',
+    effectiveDate: 'Tarikh Kuat Kuasa',
+    contactUs: 'Hubungi Kami',
+    email: 'E-mel',
+    backToHome: 'Kembali ke Laman Utama',
+    tableOfContents: 'Isi Kandungan',
+  },
+  privacy: {
+    title: 'Dasar Privasi',
+    intro: 'Kami menghargai privasi anda dan komited untuk melindungi maklumat peribadi anda. Dasar ini menjelaskan bagaimana kami mengumpul, menggunakan, dan berkongsi maklumat anda apabila anda menggunakan perkhidmatan kami.',
+    sections: {
+      informationWeCollect: { 
+        title: 'Maklumat yang Kami Kumpul', 
+        personal: 'Kami mungkin mengumpul maklumat peribadi seperti nama, alamat e-mel dan maklumat hubungan lain semasa pendaftaran.', 
+        usage: 'Kami mengumpul maklumat mengenai cara anda berinteraksi dengan perkhidmatan kami, termasuk halaman yang anda lawati.', 
+        device: 'Kami mungkin mengumpul maklumat tentang peranti yang anda gunakan untuk mengakses perkhidmatan kami, seperti alamat IP.' 
+      },
+      howWeUse: { 
+        title: 'Bagaimana Kami Menggunakan Maklumat Anda', 
+        content: 'Kami menggunakan maklumat anda untuk menyediakan, meningkatkan dan menyesuaikan perkhidmatan kami. Ia juga digunakan untuk tujuan komunikasi dan keselamatan.' 
+      },
+      dataSharing: { 
+        title: 'Perkongsian Data', 
+        content: 'Kami tidak menjual maklumat peribadi anda kepada pihak ketiga. Kami hanya berkongsi data dengan penyedia perkhidmatan yang dipercayai yang membantu kami.' 
+      },
+      dataSecurity: { 
+        title: 'Keselamatan Data', 
+        content: 'Kami melaksanakan langkah-langkah keselamatan yang munasabah untuk melindungi maklumat peribadi anda daripada akses yang tidak dibenarkan.' 
+      },
+      yourRights: { 
+        title: 'Hak Anda', 
+        content: 'Anda mempunyai hak untuk mengakses, membetulkan, dan memadamkan maklumat peribadi anda. Anda juga boleh membantah pemprosesan data.' 
+      },
+      retention: { 
+        title: 'Pengekalan Data', 
+        content: 'Kami menyimpan maklumat peribadi anda hanya selagi perlu untuk tujuan yang digariskan dalam dasar ini.' 
+      },
+      thirdPartyLinks: { 
+        title: 'Pautan Pihak Ketiga', 
+        content: 'Perkhidmatan kami mungkin mengandungi pautan ke laman web pihak ketiga. Kami tidak bertanggungjawab ke atas amalan privasi mereka.' 
+      },
+      changes: { 
+        title: 'Perubahan pada Dasar ini', 
+        content: 'Kami mungkin mengemas kini dasar ini dari semasa ke semasa. Kami akan memberitahu anda mengenai sebarang perubahan yang ketara.' 
+      },
+    },
+  },
+  terms: {
+    title: 'Syarat Perkhidmatan',
+    intro: 'Sila baca syarat perkhidmatan ini dengan teliti sebelum menggunakan perkhidmatan kami. Dengan menggunakan perkhidmatan kami, anda bersetuju untuk terikat dengan syarat ini.',
+    sections: {
+      acceptance: { 
+        title: 'Penerimaan Syarat', 
+        content: 'Dengan mengakses perkhidmatan kami, anda bersetuju untuk mematuhi syarat ini dan semua undang-undang yang terpakai.' 
+      },
+      useOfService: { 
+        title: 'Penggunaan Perkhidmatan', 
+        content: 'Anda mesti menggunakan perkhidmatan kami hanya untuk tujuan yang sah dan dengan cara yang tidak melanggar hak orang lain.' 
+      },
+      userAccounts: { 
+        title: 'Akaun Pengguna', 
+        content: 'Anda bertanggungjawab menjaga kerahsiaan akaun dan kata laluan anda. Sila maklumkan kepada kami dengan segera tentang penggunaan tanpa izin.' 
+      },
+      intellectualProperty: { 
+        title: 'Harta Intelek', 
+        content: 'Semua kandungan yang tersedia pada perkhidmatan kami adalah hak milik kami atau pemberi lesen kami dan dilindungi oleh undang-undang hak cipta.' 
+      },
+      prohibitedActivities: { 
+        title: 'Aktiviti yang Dilarang', 
+        content: 'Anda dilarang menggunakan perkhidmatan kami untuk sebarang tujuan haram atau menyebarkan virus.' 
+      },
+      limitation: { 
+        title: 'Had Liabiliti', 
+        content: 'Kami tidak akan bertanggungjawab ke atas sebarang kerosakan tidak langsung yang timbul daripada penggunaan perkhidmatan kami.' 
+      },
+      termination: { 
+        title: 'Penamatan', 
+        content: 'Kami berhak untuk menamatkan atau menggantung akses anda ke perkhidmatan kami pada bila-bila masa.' 
+      },
+      governingLaw: { 
+        title: 'Undang-undang yang Mengawal', 
+        content: 'Syarat ini akan ditadbir oleh undang-undang bidang kuasa di mana kami beroperasi.' 
+      },
+    },
+  },
+  cookies: {
+    title: 'Dasar Kuki',
+    intro: 'Dasar ini menerangkan cara kami menggunakan kuki dan teknologi serupa untuk menyediakan, menyesuaikan, dan meningkatkan perkhidmatan kami.',
+    sections: {
+      whatAreCookies: { 
+        title: 'Apakah itu Kuki?', 
+        content: 'Kuki adalah fail teks kecil yang disimpan pada peranti anda. Ia membantu tapak web mengingati tindakan anda.' 
+      },
+      typesOfCookies: { 
+        title: 'Jenis Kuki yang Kami Gunakan', 
+        essential: 'Kuki ini penting untuk tapak web berfungsi dengan betul.', 
+        performance: 'Kuki ini membantu kami mengukur prestasi tapak web kami.', 
+        functional: 'Kuki ini membolehkan fungsi tapak yang dipertingkatkan.', 
+        advertising: 'Kuki ini mungkin ditetapkan oleh rakan pengiklanan kami untuk membina profil minat anda.' 
+      },
+      managingCookies: { 
+        title: 'Mengurus Kuki', 
+        content: 'Anda boleh mengawal kuki melalui tetapan pelayar anda. Melumpuhkan kuki tertentu boleh menjejaskan fungsi tapak web.' 
+      },
+      thirdPartyCookies: { 
+        title: 'Kuki Pihak Ketiga', 
+        content: 'Kami mungkin menggunakan perkhidmatan pihak ketiga yang menggunakan kuki mereka sendiri.' 
+      },
+    },
+  },
+  dataCollection: {
+    title: 'Dasar Pengumpulan Data',
+    intro: 'Dasar ini memperincikan data yang kami kumpul, bagaimana ia dikumpul, dan mengapa.',
+    sections: {
+      whatWeCollect: { 
+        title: 'Apa yang Kami Kumpul', 
+        content: 'Kami mengumpul maklumat peribadi seperti nama, e-mel, dan maklumat teknikal mengenai peranti anda.' 
+      },
+      howWeCollect: { 
+        title: 'Bagaimana Kami Mengumpul', 
+        content: 'Kami mengumpul data secara langsung daripada anda dan secara automatik melalui teknologi pengesanan.' 
+      },
+      purpose: { 
+        title: 'Tujuan', 
+        content: 'Tujuan utama pengumpulan data adalah untuk menyediakan perkhidmatan kami dan memastikan keselamatan.' 
+      },
+      legalBasis: { 
+        title: 'Asas Perundangan', 
+        content: 'Kami bergantung pada pelbagai asas perundangan untuk memproses data anda, termasuk persetujuan anda.' 
+      },
+      storage: { 
+        title: 'Penyimpanan', 
+        content: 'Data anda disimpan dengan selamat di pelayan kami dengan penyulitan.' 
+      },
+      userControl: { 
+        title: 'Kawalan Pengguna', 
+        content: 'Anda mempunyai kawalan penuh ke atas data anda dan boleh memadamnya melalui tetapan akaun.' 
+      },
+    },
+  },
+  permissions: {
+    title: 'Dasar Kebenaran',
+    intro: 'Untuk memberikan pengalaman terbaik, apl kami mungkin meminta akses kepada ciri tertentu pada peranti anda.',
+    sections: {
+      camera: { 
+        title: 'Kamera', 
+        why: 'Kami meminta akses kamera untuk membolehkan anda menangkap dan berkongsi foto.', 
+        howToManage: 'Anda boleh menarik balik kebenaran kamera dari tetapan peranti anda.' 
+      },
+      microphone: { 
+        title: 'Mikrofon', 
+        why: 'Akses mikrofon diperlukan untuk mendayakan ciri suara.', 
+        howToManage: 'Urus kebenaran mikrofon melalui tetapan privasi peranti.' 
+      },
+      location: { 
+        title: 'Lokasi', 
+        why: 'Kami menggunakan data lokasi untuk menyediakan kandungan berasaskan lokasi.', 
+        howToManage: 'Anda boleh mengawalnya dari tetapan lokasi.' 
+      },
+      notifications: { 
+        title: 'Pemberitahuan', 
+        why: 'Kami menghantar pemberitahuan untuk memaklumkan anda tentang kemas kini penting.', 
+        howToManage: 'Kawal melalui tetapan pemberitahuan.' 
+      },
+      storage: { 
+        title: 'Penyimpanan', 
+        why: 'Akses storan diperlukan untuk menyimpan fail dan meningkatkan prestasi.', 
+        howToManage: 'Boleh diselaraskan dalam tetapan peranti.' 
+      },
+      contacts: { 
+        title: 'Kenalan', 
+        why: 'Kami meminta akses kepada kenalan untuk membantu anda mencari rakan di platform kami.', 
+        howToManage: 'Boleh dilumpuhkan melalui tetapan privasi.' 
+      },
+      biometric: { 
+        title: 'Biometrik', 
+        why: 'Pengesahan biometrik digunakan untuk log masuk yang selamat.', 
+        howToManage: 'Boleh didayakan atau dilumpuhkan dalam tetapan apl.' 
+      },
+      dataNotStored: 'Kami tidak menyimpan data biometrik anda di pelayan kami.',
+    },
+  },
+  refund: {
+    title: 'Dasar Bayaran Balik',
+    intro: 'Kami berusaha untuk memastikan kepuasan anda terhadap produk dan perkhidmatan kami.',
+    sections: {
+      eligibility: { 
+        title: 'Kelayakan', 
+        content: 'Anda layak mendapat bayaran balik jika anda memintanya dalam tempoh 14 hari selepas pembelian.' 
+      },
+      process: { 
+        title: 'Proses', 
+        content: 'Sila hubungi sokongan pelanggan untuk memulakan bayaran balik. Permintaan akan disemak dalam masa 3 hari bekerja.' 
+      },
+      nonRefundable: { 
+        title: 'Item Tidak Boleh Dikembalikan', 
+        content: 'Perkhidmatan yang disediakan sepenuhnya dan produk digital yang boleh dimuat turun tidak boleh dikembalikan.' 
+      },
+      timeline: { 
+        title: 'Garis Masa', 
+        content: 'Selepas diluluskan, bayaran balik akan diproses dalam masa 7-10 hari bekerja.' 
+      },
+    },
+  },
+  disclaimer: {
+    title: 'Penafian',
+    intro: 'Maklumat di platform kami adalah untuk tujuan maklumat umum sahaja.',
+    sections: {
+      generalDisclaimer: { 
+        title: 'Penafian Umum', 
+        content: 'Kami menyediakan maklumat tanpa jaminan. Kami tidak bertanggungjawab atas sebarang ralat.' 
+      },
+      professionalAdvice: { 
+        title: 'Bukan Nasihat Profesional', 
+        content: 'Maklumat di tapak web ini bukan nasihat profesional atau undang-undang.' 
+      },
+      externalLinks: { 
+        title: 'Pautan Luar', 
+        content: 'Tapak kami mungkin mengandungi pautan luar. Kami tidak bertanggungjawab ke atas ketepatannya.' 
+      },
+      accuracy: { 
+        title: 'Ketepatan Maklumat', 
+        content: 'Kami tidak menjamin ketepatan atau kesempurnaan maklumat sepenuhnya.' 
+      },
+    },
+  },
+  accessibility: {
+    title: 'Dasar Kebolehcapaian',
+    intro: 'Kami komited untuk menjadikan tapak web kami boleh diakses oleh semua orang, termasuk mereka yang kurang upaya.',
+    sections: {
+      commitment: { 
+        title: 'Komitmen Kami', 
+        content: 'Kami percaya internet harus boleh diakses oleh semua orang.' 
+      },
+      standards: { 
+        title: 'Piawaian Kebolehcapaian', 
+        content: 'Tapak web kami bertujuan untuk mematuhi WCAG 2.1 Tahap AA.' 
+      },
+      features: { 
+        title: 'Ciri-ciri', 
+        content: 'Tapak kami menyokong navigasi papan kekunci dan pembaca skrin.' 
+      },
+      feedback: { 
+        title: 'Maklum Balas', 
+        content: 'Jika anda mengalami kesukaran untuk mengakses, sila hubungi kami.' 
+      },
+    },
+  },
+  childSafety: {
+    title: 'Dasar Keselamatan Kanak-kanak',
+    intro: 'Melindungi privasi kanak-kanak adalah keutamaan kami.',
+    sections: {
+      ageRequirement: { 
+        title: 'Keperluan Umur', 
+        content: 'Perkhidmatan kami tidak ditujukan kepada kanak-kanak di bawah umur 13 tahun.' 
+      },
+      parentalConsent: { 
+        title: 'Persetujuan Ibu Bapa', 
+        content: 'Kami memerlukan persetujuan ibu bapa untuk pengguna berumur 13 hingga 18 tahun.' 
+      },
+      dataHandling: { 
+        title: 'Pengendalian Data', 
+        content: 'Jika kami mengumpul maklumat kanak-kanak di bawah 13 tahun, kami akan memadamnya serta-merta.' 
+      },
+      reporting: { 
+        title: 'Pelaporan', 
+        content: 'Sila hubungi kami jika anak anda memberikan maklumat kepada kami tanpa kebenaran.' 
+      },
+    },
+  },
+};
+export default translations;
