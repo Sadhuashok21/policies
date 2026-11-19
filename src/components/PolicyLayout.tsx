@@ -9,6 +9,12 @@ import {
   ChildIcon,
   AccessibilityIcon,
   DataCollectionIcon,
+  TermsIcon,
+  DisclaimerIcon,
+  DocumentTextIcon,
+  DocumentListIcon,
+  ChevronUpIcon,
+  ChevronDownIcon,
 } from './Icons';
 
 interface PolicyLayoutProps {
@@ -24,8 +30,8 @@ export const PolicyLayout: React.FC<PolicyLayoutProps> = ({
   title,
   intro,
   badge = 'Official Policy',
-  icon = '📄',
-  iconNode,
+  icon,
+  iconNode = <DocumentTextIcon size={18} className="badge-svg-icon" />,
   children,
 }) => {
   const { t, language, setLanguage } = useI18n();
@@ -34,12 +40,12 @@ export const PolicyLayout: React.FC<PolicyLayoutProps> = ({
 
   const policyList = [
     { path: '/privacy', iconNode: <ShieldIcon size={16} className="sidebar-svg-icon" />, label: t.nav.privacyPolicy },
-    { path: '/terms', iconNode: <span>📜</span>, label: t.nav.termsOfService },
+    { path: '/terms', iconNode: <TermsIcon size={16} className="sidebar-svg-icon" />, label: t.nav.termsOfService },
     { path: '/permissions', iconNode: <CameraIcon size={16} className="sidebar-svg-icon" />, label: t.nav.permissionsPolicy },
     { path: '/data-collection', iconNode: <DataCollectionIcon size={16} className="sidebar-svg-icon" />, label: t.nav.dataCollection },
     { path: '/cookies', iconNode: <CookieIcon size={16} className="sidebar-svg-icon" />, label: t.nav.cookiePolicy },
     { path: '/refund', iconNode: <CreditCardIcon size={16} className="sidebar-svg-icon" />, label: t.nav.refundPolicy },
-    { path: '/disclaimer', iconNode: <span>⚠️</span>, label: t.nav.disclaimerPolicy },
+    { path: '/disclaimer', iconNode: <DisclaimerIcon size={16} className="sidebar-svg-icon" />, label: t.nav.disclaimerPolicy },
     { path: '/accessibility', iconNode: <AccessibilityIcon size={16} className="sidebar-svg-icon" />, label: t.nav.accessibilityPolicy },
     { path: '/child-safety', iconNode: <ChildIcon size={16} className="sidebar-svg-icon" />, label: t.nav.childSafetyPolicy },
   ];
@@ -91,8 +97,12 @@ export const PolicyLayout: React.FC<PolicyLayoutProps> = ({
           className="mobile-nav-pill-btn"
           onClick={() => setMobileSidebarExpanded(!mobileSidebarExpanded)}
         >
-          <span>📑 Switch Policy or Language</span>
-          <span className="chevron-icon">{mobileSidebarExpanded ? '▲' : '▼'}</span>
+          <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+            <DocumentListIcon size={16} /> Switch Policy or Language
+          </span>
+          <span className="chevron-icon" style={{ display: 'inline-flex', alignItems: 'center' }}>
+            {mobileSidebarExpanded ? <ChevronUpIcon size={14} /> : <ChevronDownIcon size={14} />}
+          </span>
         </button>
       </div>
 

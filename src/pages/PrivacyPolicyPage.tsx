@@ -1,7 +1,16 @@
 import React from 'react';
 import { useI18n } from '../i18n';
 import { PolicyLayout } from '../components/PolicyLayout';
-import { ShieldIcon } from '../components/Icons';
+import {
+  ShieldIcon,
+  InboxIcon,
+  GearIcon,
+  HandshakeIcon,
+  ScaleIcon,
+  HourglassIcon,
+  LinkIcon,
+  FileEditIcon,
+} from '../components/Icons';
 
 export const PrivacyPolicyPage: React.FC = () => {
   const { t } = useI18n();
@@ -17,7 +26,9 @@ export const PrivacyPolicyPage: React.FC = () => {
       <div className="policy-section-group">
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">📥</span>
+            <span className="section-icon-svg">
+              <InboxIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>1. {p.sections.informationWeCollect.title}</h2>
           </div>
           <div className="subsection">
@@ -33,7 +44,9 @@ export const PrivacyPolicyPage: React.FC = () => {
 
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">⚙️</span>
+            <span className="section-icon-svg">
+              <GearIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>2. {p.sections.howWeUse.title}</h2>
           </div>
           <p>{p.sections.howWeUse.content}</p>
@@ -41,7 +54,9 @@ export const PrivacyPolicyPage: React.FC = () => {
 
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">🤝</span>
+            <span className="section-icon-svg">
+              <HandshakeIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>3. {p.sections.dataSharing.title}</h2>
           </div>
           <p>{p.sections.dataSharing.content}</p>
@@ -59,7 +74,9 @@ export const PrivacyPolicyPage: React.FC = () => {
 
         <section className="policy-content-block highlight-block">
           <div className="section-title-wrap">
-            <span className="section-icon">⚖️</span>
+            <span className="section-icon-svg">
+              <ScaleIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>5. {p.sections.yourRights.title}</h2>
           </div>
           <p>{p.sections.yourRights.content}</p>
@@ -67,7 +84,9 @@ export const PrivacyPolicyPage: React.FC = () => {
 
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">⏳</span>
+            <span className="section-icon-svg">
+              <HourglassIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>6. {p.sections.retention.title}</h2>
           </div>
           <p>{p.sections.retention.content}</p>
@@ -75,7 +94,9 @@ export const PrivacyPolicyPage: React.FC = () => {
 
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">🔗</span>
+            <span className="section-icon-svg">
+              <LinkIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>7. {p.sections.thirdPartyLinks.title}</h2>
           </div>
           <p>{p.sections.thirdPartyLinks.content}</p>
@@ -83,7 +104,9 @@ export const PrivacyPolicyPage: React.FC = () => {
 
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">📝</span>
+            <span className="section-icon-svg">
+              <FileEditIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>8. {p.sections.changes.title}</h2>
           </div>
           <p>{p.sections.changes.content}</p>

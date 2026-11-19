@@ -1,6 +1,17 @@
 import React, { useState } from 'react';
 import { useI18n } from '../i18n';
-import { CameraIcon, MicIcon, LocationIcon, BellIcon, ShieldIcon } from './Icons';
+import {
+  CameraIcon,
+  MicIcon,
+  LocationIcon,
+  BellIcon,
+  ShieldIcon,
+  FlaskIcon,
+  CheckIcon,
+  XIcon,
+  HourglassIcon,
+  CircleDotIcon,
+} from './Icons';
 
 export const PermissionTester: React.FC = () => {
   const { t } = useI18n();
@@ -75,20 +86,39 @@ export const PermissionTester: React.FC = () => {
   const getStatusBadge = (status: 'idle' | 'granted' | 'denied' | 'requesting') => {
     switch (status) {
       case 'granted':
-        return <span className="perm-badge granted">✓ Granted / Allowed</span>;
+        return (
+          <span className="perm-badge granted" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+            <CheckIcon size={14} /> Granted / Allowed
+          </span>
+        );
       case 'denied':
-        return <span className="perm-badge denied">✗ Denied / Blocked</span>;
+        return (
+          <span className="perm-badge denied" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+            <XIcon size={12} /> Denied / Blocked
+          </span>
+        );
       case 'requesting':
-        return <span className="perm-badge requesting">⏳ Requesting...</span>;
+        return (
+          <span className="perm-badge requesting" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+            <HourglassIcon size={12} /> Requesting...
+          </span>
+        );
       default:
-        return <span className="perm-badge idle">⚪ Not Requested</span>;
+        return (
+          <span className="perm-badge idle" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+            <CircleDotIcon size={10} color="#94a3b8" /> Not Requested
+          </span>
+        );
     }
   };
 
   return (
     <div className="permission-tester-card">
       <div className="tester-header">
-        <h3>🧪 Interactive Permission Request Demo & Tester</h3>
+        <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <FlaskIcon size={20} style={{ color: 'var(--primary)' }} />
+          Interactive Permission Request Demo & Tester
+        </h3>
         <p>
           Experience and test how browser permissions operate in real-time. Notice how your browser prompts for consent before access is granted.
         </p>

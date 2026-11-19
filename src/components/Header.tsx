@@ -12,10 +12,14 @@ import {
   ChildIcon,
   AccessibilityIcon,
   DataCollectionIcon,
+  TermsIcon,
+  DisclaimerIcon,
 } from './Icons';
 import logoImg from '../assets/logo.webp';
+import { useAuth } from '../auth/AuthContext';
 
 export const Header: React.FC = () => {
+  const { user, isAuthenticated, login, logout } = useAuth();
   const { language, setLanguage, t } = useI18n();
   const { font, setFont } = useFont();
   const location = useLocation();
@@ -40,9 +44,9 @@ export const Header: React.FC = () => {
     { path: '/permissions', label: t.nav.permissionsPolicy, iconNode: <CameraIcon size={16} /> },
     { path: '/data-collection', label: t.nav.dataCollection, iconNode: <DataCollectionIcon size={16} /> },
     { path: '/cookies', label: t.nav.cookiePolicy, iconNode: <CookieIcon size={16} /> },
-    { path: '/terms', label: t.nav.termsOfService, iconNode: <span>📜</span> },
+    { path: '/terms', label: t.nav.termsOfService, iconNode: <TermsIcon size={16} /> },
     { path: '/refund', label: t.nav.refundPolicy, iconNode: <CreditCardIcon size={16} /> },
-    { path: '/disclaimer', label: t.nav.disclaimerPolicy, iconNode: <span>⚠️</span> },
+    { path: '/disclaimer', label: t.nav.disclaimerPolicy, iconNode: <DisclaimerIcon size={16} /> },
     { path: '/accessibility', label: t.nav.accessibilityPolicy, iconNode: <AccessibilityIcon size={16} /> },
     { path: '/child-safety', label: t.nav.childSafetyPolicy, iconNode: <ChildIcon size={16} /> },
   ];
@@ -76,6 +80,27 @@ export const Header: React.FC = () => {
 
         {/* Desktop Controls */}
         <div className="header-controls desktop-controls">
+          {isAuthenticated ? (
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginRight: '0.5rem' }}>
+              <span style={{ fontSize: '0.85rem', color: '#e2e8f0', fontWeight: 600 }}>{user?.name}</span>
+              <button
+                type="button"
+                onClick={() => logout(false)}
+                style={{ background: 'transparent', border: '1px solid rgba(255,255,255,0.2)', color: '#94a3b8', borderRadius: '4px', padding: '2px 8px', fontSize: '0.75rem', cursor: 'pointer' }}
+              >
+                Sign out
+              </button>
+            </div>
+          ) : (
+            <button
+              type="button"
+              onClick={() => login(location.pathname)}
+              className="nav-link"
+              style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}
+            >
+              Sign in
+            </button>
+          )}
           {/* Font Selector */}
           <div className="font-selector-wrap" title="Change typography / font">
             <span className="control-icon">
@@ -177,6 +202,25 @@ export const Header: React.FC = () => {
 
           <nav className="mobile-nav-list">
             <span className="mobile-nav-heading">Navigate Policies</span>
+            {isAuthenticated ? (
+              <button
+                type="button"
+                onClick={() => { setMobileMenuOpen(false); logout(false); }}
+                className="mobile-nav-link"
+                style={{ background: 'transparent', border: 'none', textAlign: 'left', cursor: 'pointer', width: '100%' }}
+              >
+                <span className="nav-text">Sign out ({user?.name})</span>
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={() => { setMobileMenuOpen(false); login(location.pathname); }}
+                className="mobile-nav-link"
+                style={{ background: 'transparent', border: 'none', textAlign: 'left', cursor: 'pointer', width: '100%' }}
+              >
+                <span className="nav-text">Sign in (Ascentracore SSO)</span>
+              </button>
+            )}
             {allNavLinks.map((link) => (
               <Link
                 key={link.path}

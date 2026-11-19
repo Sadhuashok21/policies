@@ -1,7 +1,13 @@
 import React from 'react';
 import { useI18n } from '../i18n';
 import { PolicyLayout } from '../components/PolicyLayout';
-import { CookieIcon } from '../components/Icons';
+import {
+  CookieIcon,
+  DocumentListIcon,
+  CircleDotIcon,
+  GearIcon,
+  GlobeIcon,
+} from '../components/Icons';
 
 export const CookiePolicyPage: React.FC = () => {
   const { t } = useI18n();
@@ -27,24 +33,38 @@ export const CookiePolicyPage: React.FC = () => {
 
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">📑</span>
+            <span className="section-icon-svg">
+              <DocumentListIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>2. {c.sections.typesOfCookies.title}</h2>
           </div>
           <div className="cookie-types-grid">
             <div className="cookie-type-card">
-              <h4>🔴 Essential Cookies</h4>
+              <h4>
+                <CircleDotIcon size={12} color="#ef4444" style={{ flexShrink: 0 }} />
+                Essential Cookies
+              </h4>
               <p>{c.sections.typesOfCookies.essential}</p>
             </div>
             <div className="cookie-type-card">
-              <h4>🟡 Performance & Analytics</h4>
+              <h4>
+                <CircleDotIcon size={12} color="#f59e0b" style={{ flexShrink: 0 }} />
+                Performance & Analytics
+              </h4>
               <p>{c.sections.typesOfCookies.performance}</p>
             </div>
             <div className="cookie-type-card">
-              <h4>🟢 Functional Cookies</h4>
+              <h4>
+                <CircleDotIcon size={12} color="#10b981" style={{ flexShrink: 0 }} />
+                Functional Cookies
+              </h4>
               <p>{c.sections.typesOfCookies.functional}</p>
             </div>
             <div className="cookie-type-card">
-              <h4>🔵 Marketing & Advertising</h4>
+              <h4>
+                <CircleDotIcon size={12} color="#3b82f6" style={{ flexShrink: 0 }} />
+                Marketing & Advertising
+              </h4>
               <p>{c.sections.typesOfCookies.advertising}</p>
             </div>
           </div>
@@ -52,7 +72,9 @@ export const CookiePolicyPage: React.FC = () => {
 
         <section className="policy-content-block highlight-block">
           <div className="section-title-wrap">
-            <span className="section-icon">⚙️</span>
+            <span className="section-icon-svg">
+              <GearIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>3. {c.sections.managingCookies.title}</h2>
           </div>
           <p>{c.sections.managingCookies.content}</p>
@@ -60,7 +82,9 @@ export const CookiePolicyPage: React.FC = () => {
 
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">🌐</span>
+            <span className="section-icon-svg">
+              <GlobeIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>4. {c.sections.thirdPartyCookies.title}</h2>
           </div>
           <p>{c.sections.thirdPartyCookies.content}</p>

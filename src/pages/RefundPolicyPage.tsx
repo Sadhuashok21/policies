@@ -1,7 +1,12 @@
 import React from 'react';
 import { useI18n } from '../i18n';
 import { PolicyLayout } from '../components/PolicyLayout';
-import { CreditCardIcon } from '../components/Icons';
+import {
+  CreditCardIcon,
+  RefreshCycleIcon,
+  XCircleIcon,
+  StopwatchIcon,
+} from '../components/Icons';
 
 export const RefundPolicyPage: React.FC = () => {
   const { t } = useI18n();
@@ -27,7 +32,9 @@ export const RefundPolicyPage: React.FC = () => {
 
         <section className="policy-content-block highlight-block">
           <div className="section-title-wrap">
-            <span className="section-icon">🔄</span>
+            <span className="section-icon-svg">
+              <RefreshCycleIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>2. {r.sections.process.title}</h2>
           </div>
           <p>{r.sections.process.content}</p>
@@ -35,7 +42,9 @@ export const RefundPolicyPage: React.FC = () => {
 
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">❌</span>
+            <span className="section-icon-svg">
+              <XCircleIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>3. {r.sections.nonRefundable.title}</h2>
           </div>
           <p>{r.sections.nonRefundable.content}</p>
@@ -43,7 +52,9 @@ export const RefundPolicyPage: React.FC = () => {
 
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">⏱️</span>
+            <span className="section-icon-svg">
+              <StopwatchIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>4. {r.sections.timeline.title}</h2>
           </div>
           <p>{r.sections.timeline.content}</p>

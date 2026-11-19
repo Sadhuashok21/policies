@@ -1,7 +1,12 @@
 import React from 'react';
 import { useI18n } from '../i18n';
 import { PolicyLayout } from '../components/PolicyLayout';
-import { ChildIcon } from '../components/Icons';
+import {
+  ChildIcon,
+  FamilyIcon,
+  ShieldIcon,
+  SirenIcon,
+} from '../components/Icons';
 
 export const ChildSafetyPage: React.FC = () => {
   const { t } = useI18n();
@@ -27,7 +32,9 @@ export const ChildSafetyPage: React.FC = () => {
 
         <section className="policy-content-block highlight-block">
           <div className="section-title-wrap">
-            <span className="section-icon">👨‍👩‍👧</span>
+            <span className="section-icon-svg">
+              <FamilyIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>2. {cs.sections.parentalConsent.title}</h2>
           </div>
           <p>{cs.sections.parentalConsent.content}</p>
@@ -35,7 +42,9 @@ export const ChildSafetyPage: React.FC = () => {
 
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">🛡️</span>
+            <span className="section-icon-svg">
+              <ShieldIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>3. {cs.sections.dataHandling.title}</h2>
           </div>
           <p>{cs.sections.dataHandling.content}</p>
@@ -43,7 +52,9 @@ export const ChildSafetyPage: React.FC = () => {
 
         <section className="policy-content-block alert-block">
           <div className="section-title-wrap">
-            <span className="section-icon">🚨</span>
+            <span className="section-icon-svg">
+              <SirenIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>4. {cs.sections.reporting.title}</h2>
           </div>
           <p>{cs.sections.reporting.content}</p>

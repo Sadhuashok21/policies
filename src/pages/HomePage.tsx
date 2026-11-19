@@ -14,6 +14,9 @@ import {
   ChildIcon,
   AccessibilityIcon,
   DataCollectionIcon,
+  TermsIcon,
+  DisclaimerIcon,
+  XIcon,
 } from '../components/Icons';
 
 export const HomePage: React.FC = () => {
@@ -49,7 +52,7 @@ export const HomePage: React.FC = () => {
     {
       id: 'terms',
       path: '/terms',
-      iconNode: <span className="card-emoji-icon">📜</span>,
+      iconNode: <TermsIcon size={30} className="card-svg-icon" />,
       title: t.terms.title,
       desc: 'Binding rules, acceptable use, intellectual property, account requirements, and dispute resolution.',
       badge: 'Legal Agreement',
@@ -73,7 +76,7 @@ export const HomePage: React.FC = () => {
     {
       id: 'disclaimer',
       path: '/disclaimer',
-      iconNode: <span className="card-emoji-icon">⚠️</span>,
+      iconNode: <DisclaimerIcon size={30} className="card-svg-icon" />,
       title: t.disclaimer.title,
       desc: 'General limitations of liability, professional advice disclaimer, external links, and accuracy notices.',
       badge: 'Legal Notice',
@@ -168,8 +171,8 @@ export const HomePage: React.FC = () => {
             className="policy-search-input"
           />
           {searchTerm && (
-            <button className="clear-search" onClick={() => setSearchTerm('')} aria-label="Clear search">
-              ✕
+            <button className="clear-search" onClick={() => setSearchTerm('')} aria-label="Clear search" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+              <XIcon size={13} />
             </button>
           )}
         </div>

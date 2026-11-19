@@ -2,7 +2,17 @@ import React from 'react';
 import { useI18n } from '../i18n';
 import { PolicyLayout } from '../components/PolicyLayout';
 import { PermissionTester } from '../components/PermissionTester';
-import { CameraIcon, MicIcon, LocationIcon, BellIcon } from '../components/Icons';
+import {
+  CameraIcon,
+  MicIcon,
+  LocationIcon,
+  BellIcon,
+  StorageIcon,
+  UsersIcon,
+  FingerprintIcon,
+  LockIcon,
+  ShieldIcon,
+} from '../components/Icons';
 
 export const PermissionsPolicyPage: React.FC = () => {
   const { t } = useI18n();
@@ -42,7 +52,10 @@ export const PermissionsPolicyPage: React.FC = () => {
             <p>{p.sections.camera.howToManage}</p>
           </div>
           <div className="callout info">
-            <strong>🔒 Privacy Guarantee:</strong> Your camera feed is processed in real time and is NEVER continuously recorded, stored, or broadcast without your direct action and visual feedback.
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              <LockIcon size={16} /> <strong>Privacy Guarantee:</strong>
+            </span>{' '}
+            Your camera feed is processed in real time and is NEVER continuously recorded, stored, or broadcast without your direct action and visual feedback.
           </div>
         </section>
 
@@ -63,7 +76,10 @@ export const PermissionsPolicyPage: React.FC = () => {
             <p>{p.sections.microphone.howToManage}</p>
           </div>
           <div className="callout info">
-            <strong>🔒 Audio Protection:</strong> Audio inputs are captured only when an active voice feature is triggered. Audio data is discarded immediately after processing unless you explicitly save a voice message.
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              <LockIcon size={16} /> <strong>Audio Protection:</strong>
+            </span>{' '}
+            Audio inputs are captured only when an active voice feature is triggered. Audio data is discarded immediately after processing unless you explicitly save a voice message.
           </div>
         </section>
 
@@ -106,7 +122,9 @@ export const PermissionsPolicyPage: React.FC = () => {
         {/* Local Storage & Cache */}
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">💾</span>
+            <span className="section-icon-svg">
+              <StorageIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>5. {p.sections.storage.title}</h2>
           </div>
           <div className="subsection">
@@ -122,7 +140,9 @@ export const PermissionsPolicyPage: React.FC = () => {
         {/* Contacts Access */}
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">👥</span>
+            <span className="section-icon-svg">
+              <UsersIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>6. {p.sections.contacts.title}</h2>
           </div>
           <div className="subsection">
@@ -138,7 +158,9 @@ export const PermissionsPolicyPage: React.FC = () => {
         {/* Biometric Authentication */}
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">👆</span>
+            <span className="section-icon-svg">
+              <FingerprintIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>7. {p.sections.biometric.title}</h2>
           </div>
           <div className="subsection">
@@ -150,7 +172,10 @@ export const PermissionsPolicyPage: React.FC = () => {
             <p>{p.sections.biometric.howToManage}</p>
           </div>
           <div className="callout security">
-            <strong>🛡️ Hardware Enclave:</strong> Biometric raw templates never leave your device's Secure Enclave / Trusted Execution Environment (TEE). We receive only cryptographic pass/fail verification tokens.
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              <ShieldIcon size={16} /> <strong>Hardware Enclave:</strong>
+            </span>{' '}
+            Biometric raw templates never leave your device's Secure Enclave / Trusted Execution Environment (TEE). We receive only cryptographic pass/fail verification tokens.
           </div>
         </section>
 
