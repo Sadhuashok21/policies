@@ -1,6 +1,13 @@
 import React from 'react';
 import { useI18n } from '../i18n';
 import { PolicyLayout } from '../components/PolicyLayout';
+import {
+  DisclaimerIcon,
+  InfoIcon,
+  BriefcaseIcon,
+  LinkIcon,
+  TargetIcon,
+} from '../components/Icons';
 
 export const DisclaimerPage: React.FC = () => {
   const { t } = useI18n();
@@ -11,12 +18,14 @@ export const DisclaimerPage: React.FC = () => {
       title={d.title}
       intro={d.intro}
       badge="Legal Notice"
-      icon="⚠️"
+      iconNode={<DisclaimerIcon size={18} className="badge-svg-icon" />}
     >
       <div className="policy-section-group">
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">ℹ️</span>
+            <span className="section-icon-svg">
+              <InfoIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>1. {d.sections.generalDisclaimer.title}</h2>
           </div>
           <p>{d.sections.generalDisclaimer.content}</p>
@@ -24,7 +33,9 @@ export const DisclaimerPage: React.FC = () => {
 
         <section className="policy-content-block alert-block">
           <div className="section-title-wrap">
-            <span className="section-icon">💼</span>
+            <span className="section-icon-svg">
+              <BriefcaseIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>2. {d.sections.professionalAdvice.title}</h2>
           </div>
           <p>{d.sections.professionalAdvice.content}</p>
@@ -32,7 +43,9 @@ export const DisclaimerPage: React.FC = () => {
 
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">🔗</span>
+            <span className="section-icon-svg">
+              <LinkIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>3. {d.sections.externalLinks.title}</h2>
           </div>
           <p>{d.sections.externalLinks.content}</p>
@@ -40,7 +53,9 @@ export const DisclaimerPage: React.FC = () => {
 
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">🎯</span>
+            <span className="section-icon-svg">
+              <TargetIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>4. {d.sections.accuracy.title}</h2>
           </div>
           <p>{d.sections.accuracy.content}</p>

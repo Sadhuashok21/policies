@@ -13,34 +13,41 @@ import { RefundPolicyPage } from './pages/RefundPolicyPage';
 import { DisclaimerPage } from './pages/DisclaimerPage';
 import { AccessibilityPage } from './pages/AccessibilityPage';
 import { ChildSafetyPage } from './pages/ChildSafetyPage';
+import { NotFound } from './pages/NotFound';
+import { AuthProvider } from './auth/AuthContext';
+import { AuthCallback } from './auth/Callback';
 import './policies.css';
 
 export function App() {
   return (
-    <FontProvider>
-      <I18nProvider>
-        <BrowserRouter>
-          <div className="app-container">
-            <Header />
-            <div className="main-content-wrapper">
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/privacy" element={<PrivacyPolicyPage />} />
-                <Route path="/terms" element={<TermsOfServicePage />} />
-                <Route path="/permissions" element={<PermissionsPolicyPage />} />
-                <Route path="/data-collection" element={<DataCollectionPage />} />
-                <Route path="/cookies" element={<CookiePolicyPage />} />
-                <Route path="/refund" element={<RefundPolicyPage />} />
-                <Route path="/disclaimer" element={<DisclaimerPage />} />
-                <Route path="/accessibility" element={<AccessibilityPage />} />
-                <Route path="/child-safety" element={<ChildSafetyPage />} />
-              </Routes>
+    <AuthProvider config={{ clientId: 'policies' }}>
+      <FontProvider>
+        <I18nProvider>
+          <BrowserRouter>
+            <div className="app-container">
+              <Header />
+              <div className="main-content-wrapper">
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/auth/callback" element={<AuthCallback />} />
+                  <Route path="/privacy" element={<PrivacyPolicyPage />} />
+                  <Route path="/terms" element={<TermsOfServicePage />} />
+                  <Route path="/permissions" element={<PermissionsPolicyPage />} />
+                  <Route path="/data-collection" element={<DataCollectionPage />} />
+                  <Route path="/cookies" element={<CookiePolicyPage />} />
+                  <Route path="/refund" element={<RefundPolicyPage />} />
+                  <Route path="/disclaimer" element={<DisclaimerPage />} />
+                  <Route path="/accessibility" element={<AccessibilityPage />} />
+                  <Route path="/child-safety" element={<ChildSafetyPage />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </div>
+              <Footer />
             </div>
-            <Footer />
-          </div>
-        </BrowserRouter>
-      </I18nProvider>
-    </FontProvider>
+          </BrowserRouter>
+        </I18nProvider>
+      </FontProvider>
+    </AuthProvider>
   );
 }
 

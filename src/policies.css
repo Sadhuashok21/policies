@@ -1289,6 +1289,14 @@ h1, h2, h3, h4, h5, h6 {
   flex-shrink: 0;
 }
 
+.section-icon-svg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--primary);
+}
+
 .policy-content-block h2 {
   font-size: clamp(19px, 3vw, 23px);
   font-weight: 800;
@@ -1375,6 +1383,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cookie-type-card h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 15px;
   font-weight: 700;
   margin-bottom: 6px;

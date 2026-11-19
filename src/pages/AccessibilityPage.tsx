@@ -1,7 +1,12 @@
 import React from 'react';
 import { useI18n } from '../i18n';
 import { PolicyLayout } from '../components/PolicyLayout';
-import { AccessibilityIcon } from '../components/Icons';
+import {
+  AccessibilityIcon,
+  RulerIcon,
+  SparklesIcon,
+  ChatBubbleIcon,
+} from '../components/Icons';
 
 export const AccessibilityPage: React.FC = () => {
   const { t } = useI18n();
@@ -27,7 +32,9 @@ export const AccessibilityPage: React.FC = () => {
 
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">📐</span>
+            <span className="section-icon-svg">
+              <RulerIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>2. {a.sections.standards.title}</h2>
           </div>
           <p>{a.sections.standards.content}</p>
@@ -35,7 +42,9 @@ export const AccessibilityPage: React.FC = () => {
 
         <section className="policy-content-block highlight-block">
           <div className="section-title-wrap">
-            <span className="section-icon">✨</span>
+            <span className="section-icon-svg">
+              <SparklesIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>3. {a.sections.features.title}</h2>
           </div>
           <p>{a.sections.features.content}</p>
@@ -43,7 +52,9 @@ export const AccessibilityPage: React.FC = () => {
 
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">💬</span>
+            <span className="section-icon-svg">
+              <ChatBubbleIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>4. {a.sections.feedback.title}</h2>
           </div>
           <p>{a.sections.feedback.content}</p>

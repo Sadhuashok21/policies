@@ -1,7 +1,14 @@
 import React from 'react';
 import { useI18n } from '../i18n';
 import { PolicyLayout } from '../components/PolicyLayout';
-import { DataCollectionIcon } from '../components/Icons';
+import {
+  DataCollectionIcon,
+  RefreshCycleIcon,
+  TargetIcon,
+  ScaleIcon,
+  BuildingIcon,
+  UserIcon,
+} from '../components/Icons';
 
 export const DataCollectionPage: React.FC = () => {
   const { t } = useI18n();
@@ -27,7 +34,9 @@ export const DataCollectionPage: React.FC = () => {
 
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">🔄</span>
+            <span className="section-icon-svg">
+              <RefreshCycleIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>2. {d.sections.howWeCollect.title}</h2>
           </div>
           <p>{d.sections.howWeCollect.content}</p>
@@ -35,7 +44,9 @@ export const DataCollectionPage: React.FC = () => {
 
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">🎯</span>
+            <span className="section-icon-svg">
+              <TargetIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>3. {d.sections.purpose.title}</h2>
           </div>
           <p>{d.sections.purpose.content}</p>
@@ -43,7 +54,9 @@ export const DataCollectionPage: React.FC = () => {
 
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">⚖️</span>
+            <span className="section-icon-svg">
+              <ScaleIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>4. {d.sections.legalBasis.title}</h2>
           </div>
           <p>{d.sections.legalBasis.content}</p>
@@ -51,7 +64,9 @@ export const DataCollectionPage: React.FC = () => {
 
         <section className="policy-content-block">
           <div className="section-title-wrap">
-            <span className="section-icon">🏢</span>
+            <span className="section-icon-svg">
+              <BuildingIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>5. {d.sections.storage.title}</h2>
           </div>
           <p>{d.sections.storage.content}</p>
@@ -59,7 +74,9 @@ export const DataCollectionPage: React.FC = () => {
 
         <section className="policy-content-block highlight-block">
           <div className="section-title-wrap">
-            <span className="section-icon">👤</span>
+            <span className="section-icon-svg">
+              <UserIcon size={24} className="policy-header-svg" />
+            </span>
             <h2>6. {d.sections.userControl.title}</h2>
           </div>
           <p>{d.sections.userControl.content}</p>
