@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useI18n } from '../i18n';
 import { PolicyLayout } from '../components/PolicyLayout';
+import { PRODUCT_POLICIES } from '../data/productPolicies';
 import {
   ShieldIcon,
   InboxIcon,
@@ -10,6 +12,7 @@ import {
   HourglassIcon,
   LinkIcon,
   FileEditIcon,
+  GlobeIcon,
 } from '../components/Icons';
 
 export const PrivacyPolicyPage: React.FC = () => {
@@ -110,6 +113,35 @@ export const PrivacyPolicyPage: React.FC = () => {
             <h2>8. {p.sections.changes.title}</h2>
           </div>
           <p>{p.sections.changes.content}</p>
+        </section>
+
+        <section className="policy-content-block highlight-block">
+          <div className="section-title-wrap">
+            <span className="section-icon-svg">
+              <GlobeIcon size={24} className="policy-header-svg" />
+            </span>
+            <h2>9. Product-Specific Policies &amp; Advertising Disclosures</h2>
+          </div>
+          <p>
+            Each AscentraCore Solutions application and website maintains its own product-specific
+            privacy policy and advertising disclosure detailing integrated SDKs, cookies, and
+            platform-local consent controls:
+          </p>
+          <span id="ezoic-privacy-policy-embed" className="ezoic-embed-slot"></span>
+          <div className="product-pill-row" style={{ marginTop: '12px' }}>
+            {PRODUCT_POLICIES.map((prod) => (
+              <Link
+                key={prod.slug}
+                to={`/${prod.slug}/privacy-policy`}
+                className="pref-btn-secondary"
+              >
+                {prod.name} Privacy Policy →
+              </Link>
+            ))}
+            <Link to="/privacy-settings" className="pref-btn-primary">
+              Privacy Settings Hub
+            </Link>
+          </div>
         </section>
       </div>
     </PolicyLayout>

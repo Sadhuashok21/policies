@@ -17,6 +17,8 @@ import { RefundPolicyPage } from '../pages/RefundPolicyPage';
 import { DisclaimerPage } from '../pages/DisclaimerPage';
 import { AccessibilityPage } from '../pages/AccessibilityPage';
 import { ChildSafetyPage } from '../pages/ChildSafetyPage';
+import { ProductPrivacyPolicyPage } from '../pages/ProductPrivacyPolicyPage';
+import { PrivacySettingsPage } from '../pages/PrivacySettingsPage';
 import { NotFound } from '../pages/NotFound';
 import { PermissionTester } from '../components/PermissionTester';
 
@@ -40,6 +42,9 @@ const renderAppWithRoute = (initialRoute = '/') => {
                   <Route path="/disclaimer" element={<DisclaimerPage />} />
                   <Route path="/accessibility" element={<AccessibilityPage />} />
                   <Route path="/child-safety" element={<ChildSafetyPage />} />
+                  <Route path="/privacy-settings" element={<PrivacySettingsPage />} />
+                  <Route path="/:productSlug/privacy-policy" element={<ProductPrivacyPolicyPage />} />
+                  <Route path="/:productSlug/privacy-settings" element={<PrivacySettingsPage />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </div>
@@ -433,5 +438,39 @@ describe('Policy App - Links and Buttons Functionality Tests', () => {
     // Callouts have lock and shield icons
     const callouts = document.querySelectorAll('.callout');
     expect(callouts.length).toBe(4);
+  });
+
+  it('21. HomePage renders product-specific policy cards alongside the 9 core policy cards', () => {
+    renderAppWithRoute('/');
+    expect(document.querySelectorAll('.policy-card').length).toBe(9);
+    const productCards = document.querySelectorAll('.product-policy-card');
+    expect(productCards.length).toBe(3);
+    expect(document.body.textContent).toContain('SkilTrix');
+    expect(document.body.textContent).toContain('Krishi');
+    expect(document.body.textContent).toContain('ASAI Studio');
+  });
+
+  it('22. /skiltrix/privacy-policy renders SkilTrix advertising disclosures and Ezoic pending status', () => {
+    renderAppWithRoute('/skiltrix/privacy-policy');
+    expect(screen.getByText(/SkilTrix Privacy Policy & Advertising Disclosures/i)).toBeTruthy();
+    expect(document.body.textContent).toContain('ca-pub-8687126461256058');
+    expect(document.body.textContent).toContain('Pending External Dashboard Setup');
+    expect(document.body.textContent).toContain('GDPR / UK GDPR Rights');
+  });
+
+  it('23. /krishi/privacy-policy accurately states no third-party advertising is integrated', () => {
+    renderAppWithRoute('/krishi/privacy-policy');
+    expect(screen.getByText(/Krishi Privacy Policy & Advertising Disclosures/i)).toBeTruthy();
+    expect(document.body.textContent).toContain('No Third-Party Advertising Currently Integrated');
+  });
+
+  it('24. /privacy-settings renders preferences panel and distinguishes documentation from local CMP consent', () => {
+    renderAppWithRoute('/skiltrix/privacy-settings');
+    expect(screen.getByText(/SkilTrix Privacy Settings & Consent Guide/i)).toBeTruthy();
+    const cmpBtn = screen.getByRole('button', { name: /How to Change SkilTrix Consent/i });
+    fireEvent.click(cmpBtn);
+    const statusBanner = document.querySelector('.cmp-info-banner');
+    expect(statusBanner).toBeTruthy();
+    expect(statusBanner?.textContent).toContain('does not record cross-domain GDPR/CCPA consent');
   });
 });
