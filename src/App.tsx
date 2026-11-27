@@ -13,6 +13,8 @@ import { RefundPolicyPage } from './pages/RefundPolicyPage';
 import { DisclaimerPage } from './pages/DisclaimerPage';
 import { AccessibilityPage } from './pages/AccessibilityPage';
 import { ChildSafetyPage } from './pages/ChildSafetyPage';
+import { ProductPrivacyPolicyPage } from './pages/ProductPrivacyPolicyPage';
+import { PrivacySettingsPage } from './pages/PrivacySettingsPage';
 import { NotFound } from './pages/NotFound';
 import { AuthProvider } from './auth/AuthContext';
 import { AuthCallback } from './auth/Callback';
@@ -39,6 +41,9 @@ export function App() {
                   <Route path="/disclaimer" element={<DisclaimerPage />} />
                   <Route path="/accessibility" element={<AccessibilityPage />} />
                   <Route path="/child-safety" element={<ChildSafetyPage />} />
+                  <Route path="/privacy-settings" element={<PrivacySettingsPage />} />
+                  <Route path="/:productSlug/privacy-policy" element={<ProductPrivacyPolicyPage />} />
+                  <Route path="/:productSlug/privacy-settings" element={<PrivacySettingsPage />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </div>

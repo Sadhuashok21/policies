@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useI18n } from '../i18n';
 import { PolicyLayout } from '../components/PolicyLayout';
 import {
@@ -88,6 +89,14 @@ export const CookiePolicyPage: React.FC = () => {
             <h2>4. {c.sections.thirdPartyCookies.title}</h2>
           </div>
           <p>{c.sections.thirdPartyCookies.content}</p>
+          <div className="product-pill-row" style={{ marginTop: '12px' }}>
+            <Link to="/skiltrix/privacy-policy" className="pref-btn-secondary">
+              SkilTrix Advertising &amp; Cookie Disclosures →
+            </Link>
+            <Link to="/privacy-settings" className="pref-btn-primary">
+              Manage Privacy Preferences
+            </Link>
+          </div>
         </section>
       </div>
     </PolicyLayout>

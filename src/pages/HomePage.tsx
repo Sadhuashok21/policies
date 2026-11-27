@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useI18n, SUPPORTED_LANGUAGES, type LanguageCode } from '../i18n';
 import { useFont, AVAILABLE_FONTS, type FontChoice } from '../context/FontContext';
 import { PermissionTester } from '../components/PermissionTester';
+import { PRODUCT_POLICIES } from '../data/productPolicies';
 import {
   CookieIcon,
   CameraIcon,
@@ -198,6 +199,48 @@ export const HomePage: React.FC = () => {
                 <span className="read-link">Read full policy →</span>
               </div>
             </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Product-Specific Privacy & Advertising Disclosures */}
+      <section className="product-policies-section">
+        <div className="section-header-wrap">
+          <h2>Product-Specific Privacy &amp; Advertising Policies</h2>
+          <p>
+            Dedicated legal disclosures, advertising partner lists, and privacy preference guides for
+            each AscentraCore Solutions app and website.{' '}
+            <Link to="/privacy-settings" className="inline-policy-link">
+              Open Privacy Settings Hub →
+            </Link>
+          </p>
+        </div>
+        <span id="ezoic-privacy-policy-embed" className="ezoic-embed-slot"></span>
+
+        <div className="product-policies-grid">
+          {PRODUCT_POLICIES.map((prod) => (
+            <div key={prod.slug} className="product-policy-card">
+              <div className="card-top">
+                <span className="card-badge">{prod.category}</span>
+                <span
+                  className={`status-pill ${
+                    prod.advertising.usesAdvertising ? 'status-active' : 'status-neutral'
+                  }`}
+                >
+                  {prod.advertising.usesAdvertising ? 'Ad-Supported' : 'Ad-Free'}
+                </span>
+              </div>
+              <h3 className="card-title">{prod.name}</h3>
+              <p className="card-desc">{prod.tagline}</p>
+              <div className="product-card-actions">
+                <Link to={`/${prod.slug}/privacy-policy`} className="read-link">
+                  Privacy Policy →
+                </Link>
+                <Link to={`/${prod.slug}/privacy-settings`} className="read-link-secondary">
+                  Privacy Settings
+                </Link>
+              </div>
+            </div>
           ))}
         </div>
       </section>
